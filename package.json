@@ -1,0 +1,36 @@
+{
+  "name": "functionchallenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "exercise2.1.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest",
+    "format": "prettier --write",
+    "eslint": "eslint --fix",
+    "precommit": "lint-staged",
+    "prepush": "npm run test"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "eslint": "^4.19.1",
+    "husky": "^0.14.3",
+    "jest": "^22.4.3",
+    "lint-staged": "^7.0.5",
+    "prettier": "^1.12.1"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.11.0"
+  }
+}
